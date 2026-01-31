@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Question for Arisa ❤️ - February 1, 2026</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <style>
+        :root {
+            --primary-pink: #ff6b8b;
+            --light-pink: #ffccd5;
+            --dark-pink: #ff477e;
+            --white: #fff;
+            --light-bg: #fff5f7;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            min-height: 100vh;
+            overflow-x: hidden;
+            transition: background 1s ease;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, var(--dark-pink), var(--primary-pink));
+            box-shadow: 0 4px 12px rgba(255, 71, 126, 0.2);
+        }
+
+        .navbar-brand {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .section {
+            padding: 100px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(255, 107, 139, 0.2);
+            padding: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            border: 2px solid var(--light-pink);
+        }
+
+        .heart-pulse {
+            animation: pulse 2s infinite;
+            color: var(--primary-pink);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .btn-yes {
+            background: linear-gradient(to right, #4CAF50, #2E7D32);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+        }
+
+        .btn-yes:hover:not(:disabled) {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn-no {
+            background: linear-gradient(to right, #f44336, #c62828);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            border: none;
+        }
+
+        .btn-no:hover:not(:disabled) {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(244, 67, 54, 0.4);
+        }
+
+        .valentine-button-container {
+            display: none;
+            margin-top: 30px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn-valentine {
+            background: linear-gradient(45deg, #ff6b8b, #ff477e, #ff3366);
+            color: white;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255, 71, 126, 0.4);
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 5px 20px rgba(255, 107, 139, 0.5);
+            }
+
+            100% {
+                box-shadow: 0 10px 35px rgba(255, 107, 139, 0.8), 0 0 50px rgba(255, 107, 139, 0.3);
+            }
+        }
+
+        .btn-valentine:hover:not(:disabled) {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 107, 139, 0.6), 0 0 60px rgba(255, 107, 139, 0.4);
+        }
+
+        .btn-valentine i {
+            margin-right: 15px;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            5%,
+            15% {
+                transform: scale(1.2);
+            }
+
+            10%,
+            20% {
+                transform: scale(1);
+            }
+        }
+
+        .valentine-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: gold;
+            color: #333;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transform: rotate(15deg);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .floating-hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-hearts i {
+            position: absolute;
+            color: var(--light-pink);
+            font-size: 1.5rem;
+            opacity: 0.7;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+
+        .countdown {
+            font-size: 1.2rem;
+            color: var(--dark-pink);
+            font-weight: 600;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(255, 107, 139, 0.1);
+        }
+
+        .celebration {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .footer {
+            background: linear-gradient(to right, var(--dark-pink), var(--primary-pink));
+            color: white;
+            padding: 20px 0;
+        }
+
+        .date-display {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            display: inline-block;
+            border-left: 5px solid var(--primary-pink);
+        }
+
+        .email-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+            z-index: 10000;
+            display: none;
+            animation: slideInRight 0.5s ease-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .answer-buttons {
+            position: relative;
+            min-height: 150px;
+        }
+
+        .calendar-link {
+            display: inline-flex;
+            align-items: center;
+            color: #0d6efd !important;
+            font-weight: 600;
+            padding: 8px 15px;
+            background-color: rgba(13, 110, 253, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none !important;
+        }
+
+        .calendar-link:hover {
+            background-color: rgba(13, 110, 253, 0.2);
+            transform: translateY(-2px);
+            color: #0b5ed7 !important;
+        }
+
+        .calendar-link i {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Email Notification -->
+    <div class="email-notification" id="emailNotification">
+        <i class="fas fa-envelope me-2"></i>
+        <span id="emailMessage">Email sent successfully!</span>
+    </div>
+
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="section">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="question-card text-center">
+                        <!-- Current Date Display -->
+                        <div class="date-display">
+                            <h5 class="mb-0"><i class="fas fa-calendar-day me-2"></i><span id="currentDate"></span></h5>
+                        </div>
+
+                        <i class="fas fa-heart fa-5x mb-4 heart-pulse"></i>
+                        <h1 class="display-4 mb-4" style="color: var(--dark-pink);">My Dear Love, Arisa</h1>
+
+                        <div class="lead-text mb-5">
+                            <p class="lead">Every moment with you feels like a beautiful chapter in the best love story
+                                ever written.</p>
+                            <p class="lead">You've brought joy, laughter, and meaning into my life.</p>
+                        </div>
+
+                        <div class="mb-5">
+                            <h2 class="mb-4">You mean everything to me.</h2>
+                            <div class="mb-4">
+                                <i class="fas fa-heart fa-3x" style="color: var(--primary-pink);"></i>
+                            </div>
+                        </div>
+
+                        <div class="mb-5" id="valentineQuestion">
+                            <h2 class="mb-4" style="color: var(--dark-pink);">Will you be my Valentine?</h2>
+                            <p class="mb-4">The choice is yours my love.</p>
+                            <p class="small text-muted"><i class="fas fa-envelope me-1"></i>Your answer will be emailed
+                                to me</p>
+                        </div>
+
+                        <!-- Question Container (Hidden when answered or on Valentine's Day) -->
+                        <div id="questionContainer">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8">
+                                    <div class="answer-buttons">
+                                        <button class="btn btn-yes btn-lg" id="yesBtn">
+                                            <i class="fas fa-heart me-2"></i>YES! I'll be your Valentine!
+                                        </button>
+                                        <button class="btn btn-no btn-lg" id="noBtn">
+                                            <i class="fas fa-times me-2"></i>Maybe Later
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Valentine's Day Button (Shows on Feb 14+ if YES) -->
+                        <div class="valentine-button-container" id="valentineButtonContainer">
+                            <div class="alert alert-success mb-4">
+                                <h4><i class="fas fa-calendar-heart me-2"></i>Happy Valentine's Day 2026, Arisa! 🎉</h4>
+                                <p class="mb-0">Because you said YES on February 1st, or later, your special Valentine's Day
+                                    website is now unlocked!</p>
+                            </div>
+
+                            <div class="position-relative d-inline-block">
+                                <button class="btn btn-valentine" id="valentineSiteBtn">
+                                    <i class="fas fa-heart"></i>
+                                    Open Your Valentine's Day Website
+                                </button>
+                                <div class="valentine-badge">2026</div>
+                            </div>
+
+                            <p class="mt-3 text-muted">
+                                <i class="fas fa-lock-open me-1"></i>
+                                Special access granted: February 14, 2026
+                            </p>
+                        </div>
+
+                        <!-- Response Messages -->
+                        <div class="mt-5">
+                            <div id="responseMessage"></div>
+                            <div id="countdownSection" class="mt-4" style="display: none;">
+                                <div class="countdown">
+                                    <i class="fas fa-clock me-2"></i>
+                                    <span id="countdownTimer"></span> until Valentine's Day 2026!
+                                </div>
+                            </div>
+                            <div id="celebration"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>Made with <i class="fas fa-heart text-danger"></i> by Márk for Arisa</p>
+            <p class="small">February 1st, 2026 - The beginning of our Valentine's story</p>
+            <p class="small"><i class="fas fa-envelope me-1"></i>Your response will be automatically emailed</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // ============================================
+            // EMAILJS CONFIGURATION
+            // ============================================
+            emailjs.init("s79ASDXskhx21jWu7");
+
+            const EMAIL_CONFIG = {
+                serviceId: "service_2znrjor",
+                templateId: "template_cx9m29p",
+                toEmail: "kovimark2005@gmail.com",
+                fromName: "Valentine Website for Arisa"
+            };
+
+            // ============================================
+            // STATE VARIABLES
+            // ============================================
+            const now = new Date();
+            const valentines2026 = new Date(2026, 1, 14);
+            const isValentinesDayOrLater = now >= valentines2026;
+            const hasSaidYes = localStorage.getItem('valentineResponse2026') === 'yes';
+            const hasSentEmail = localStorage.getItem('emailSent2026') === 'true';
+
+            // ============================================
+            // HELPER FUNCTIONS
+            // ============================================
+
+            async function sendEmail(answer, timestamp) {
+                try {
+                    showEmailNotification("Sending email to Márk...", "info");
+
+                    const templateParams = {
+                        to_email: EMAIL_CONFIG.toEmail,
+                        from_name: EMAIL_CONFIG.fromName,
+                        answer: answer,
+                        timestamp: timestamp,
+                        date: now.toLocaleDateString(),
+                        girlfriend_name: "Arisa",
+                        reply_to: EMAIL_CONFIG.toEmail
+                    };
+
+                    const response = await emailjs.send(
+                        EMAIL_CONFIG.serviceId,
+                        EMAIL_CONFIG.templateId,
+                        templateParams
+                    );
+
+                    showEmailNotification("Email sent to Márk! 📧", "success");
+                    return true;
+                } catch (error) {
+                    let errorMessage = "Email failed to send";
+                    if (error.text) errorMessage = error.text;
+                    else if (error.message) errorMessage = error.message;
+
+                    showEmailNotification(errorMessage, "error");
+                    return false;
+                }
+            }
+
+            function showEmailNotification(message, type = "success") {
+                const notification = document.getElementById('emailNotification');
+                const emailMessage = document.getElementById('emailMessage');
+
+                emailMessage.textContent = message;
+                notification.style.background = type === "success" ? "#4CAF50" : type === "error" ? "#f44336" : "#2196F3";
+                notification.style.display = 'block';
+
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 5000);
+            }
+
+            function createFloatingHearts(count) {
+                const container = document.getElementById('floatingHearts');
+                for (let i = 0; i < count; i++) {
+                    const heart = document.createElement('i');
+                    heart.className = 'fas fa-heart';
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.top = Math.random() * 100 + 'vh';
+                    heart.style.animationDelay = Math.random() * 5 + 's';
+                    heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+                    heart.style.opacity = Math.random() * 0.5 + 0.3;
+
+                    container.appendChild(heart);
+
+                    setTimeout(() => {
+                        if (heart.parentNode === container) {
+                            container.removeChild(heart);
+                        }
+                    }, 6000);
+                }
+            }
+
+            function playCelebrationSound(type) {
+                try {
+                    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    const notes = type === 'yes'
+                        ? [523.25, 659.25, 783.99, 1046.50]
+                        : [523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77, 1046.50];
+
+                    let time = audioContext.currentTime;
+                    const noteDuration = 0.5;
+
+                    notes.forEach((freq, i) => {
+                        const oscillator = audioContext.createOscillator();
+                        const gainNode = audioContext.createGain();
+
+                        oscillator.connect(gainNode);
+                        gainNode.connect(audioContext.destination);
+                        oscillator.frequency.value = freq;
+                        oscillator.type = type === 'yes' ? 'sine' : 'triangle';
+
+                        gainNode.gain.setValueAtTime(0, time);
+                        gainNode.gain.linearRampToValueAtTime(0.2, time + 0.1);
+                        gainNode.gain.exponentialRampToValueAtTime(0.01, time + noteDuration);
+
+                        oscillator.start(time);
+                        oscillator.stop(time + noteDuration);
+
+                        time += type === 'yes' ? 0.15 : 0.1;
+                    });
+                } catch (e) {
+                    console.log("Audio not supported");
+                }
+            }
+
+            function startCountdown() {
+                function updateCountdown() {
+                    if (now >= valentines2026) {
+                        document.getElementById('countdownTimer').textContent = "Happy Valentine's Day!";
+                        return;
+                    }
+
+                    const diff = valentines2026 - now;
+                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                    document.getElementById('countdownTimer').textContent =
+                        `${days} days, ${hours}h ${minutes}m ${seconds}s`;
+                }
+
+                updateCountdown();
+                setInterval(updateCountdown, 1000);
+            }
+
+            function createGoogleCalendarLink() {
+                const eventTitle = "Valentine's Day 2026 with Márk 💖";
+                const eventDescription = "A special Valentine's Day surprise awaits! Remember to check the website for your special gift from Márk.\n\nWebsite: " + window.location.href;
+                const location = "Our Special Love Story 💕";
+                
+                // Valentine's Day 2026 (February 14, 2026) - All day event
+                const startDate = "20260214";
+                const endDate = "20260215"; // Next day for all-day event
+                
+                // Create the Google Calendar URL
+                const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+                    `&text=${encodeURIComponent(eventTitle)}` +
+                    `&details=${encodeURIComponent(eventDescription)}` +
+                    `&location=${encodeURIComponent(location)}` +
+                    `&dates=${startDate}/${endDate}` +
+                    `&sf=true&output=xml`;
+                
+                return googleCalendarUrl;
+            }
+
+            function createICSDownload() {
+                const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+SUMMARY:Valentine's Day 2026 with Márk 💖
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260215
+DESCRIPTION:A special Valentine's Day surprise awaits! Remember to check the website for your special gift from Márk.\\n\\nWebsite: ${window.location.href}
+LOCATION:Our Special Love Story 💕
+URL:${window.location.href}
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR`;
+                
+                // Create download link
+                const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+                const url = window.URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = "Valentines-Day-2026.ics";
+                link.style.display = 'none';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                window.URL.revokeObjectURL(url);
+            }
+
+            function setupGoogleCalendarLink() {
+                const calendarLink = document.getElementById('googleCalendarLink');
+                if (calendarLink) {
+                    calendarLink.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        // Show confirmation
+                        const calendarAlert = document.createElement('div');
+                        calendarAlert.className = 'alert alert-info mt-3';
+                        calendarAlert.innerHTML = `
+                            <h5><i class="fas fa-calendar me-2"></i>Adding to Google Calendar</h5>
+                            <p>Opening Google Calendar with your Valentine's Day reminder pre-filled...</p>
+                            <p class="small">Just click "Save" in Google Calendar to add it!</p>
+                            <p class="small mb-0"><i class="fas fa-info-circle me-1"></i>If the link doesn't work, check your download folder for "Valentines-Day-2026.ics"</p>
+                        `;
+                        
+                        const responseMessage = document.getElementById('responseMessage');
+                        if (responseMessage.querySelector('.alert-info')) {
+                            responseMessage.querySelector('.alert-info').remove();
+                        }
+                        responseMessage.appendChild(calendarAlert);
+                        
+                        // Open Google Calendar in a new tab
+                        window.open(createGoogleCalendarLink(), '_blank');
+                        
+                        // Also create a fallback .ics file download
+                        setTimeout(() => {
+                            createICSDownload();
+                        }, 1000);
+                    });
+                }
+            }
+
+            function handleYesResponse() {
+                document.getElementById('valentineQuestion').style.display = 'none';
+                const responseMessage = document.getElementById('responseMessage');
+                const celebration = document.getElementById('celebration');
+                const countdownSection = document.getElementById('countdownSection');
+
+                responseMessage.innerHTML = `
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">🎉 You've made me the happiest person in the world, BABYYYYY!</h4>
+                    <p>I'm thankful for you every day Mama Bear</p>
+                    <p><i class="fas fa-envelope me-1"></i> <strong>An email has been sent to me with your answer!</strong></p>
+                    <hr>
+                    <p class="mb-0">A special secret gift will unlock or be sent to you on <strong>February 14th, 2026</strong>!<br/>
+                        <a href="#" id="googleCalendarLink" class="calendar-link">
+                            <i class="fas fa-calendar-plus"></i>Click here to add a reminder to your Google Calendar
+                        </a>
+                    </p>
+                </div>
+                `;
+
+                // Setup the Google Calendar link
+                setTimeout(() => {
+                    setupGoogleCalendarLink();
+                }, 100);
+
+                countdownSection.style.display = 'block';
+                startCountdown();
+                document.getElementById('questionContainer').style.display = 'none';
+                document.body.style.background = 'linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%)';
+
+                // Create thousands of floating heart emojis
+                createHeartEmojiBalloons(50);
+                createFloatingHearts(50);
+                playCelebrationSound('yes');
+
+                if (isValentinesDayOrLater) {
+                    setTimeout(() => {
+                        document.getElementById('valentineButtonContainer').style.display = 'block';
+                        celebration.innerHTML = '';
+                    }, 3000);
+                }
+            }
+
+            function createHeartEmojiBalloons(count) {
+                const container = document.createElement('div');
+                container.style.position = 'fixed';
+                container.style.top = '0';
+                container.style.left = '0';
+                container.style.width = '100%';
+                container.style.height = '100%';
+                container.style.pointerEvents = 'none';
+                container.style.zIndex = '9999';
+                document.body.appendChild(container);
+
+                for (let i = 0; i < count; i++) {
+                    const heart = document.createElement('div');
+                    heart.textContent = '❤️';
+                    heart.style.position = 'absolute';
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.bottom = '-50px';
+                    heart.style.fontSize = Math.random() * 20 + 15 + 'px';
+                    heart.style.opacity = '1';
+                    heart.style.cursor = 'default';
+                    heart.style.animation = `float-up ${Math.random() * 3 + 3}s ease-out forwards`;
+                    heart.style.animationDelay = Math.random() * 0.5 + 's';
+
+                    container.appendChild(heart);
+                }
+
+                // Add animation keyframes if not already present
+                if (!document.getElementById('heart-balloon-animation')) {
+                    const style = document.createElement('style');
+                    style.id = 'heart-balloon-animation';
+                    style.textContent = `
+                    @keyframes float-up {
+                        0% {
+                            bottom: -50px;
+                            opacity: 1;
+                            transform: translateX(0) scale(1);
+                        }
+                        100% {
+                            bottom: 100vh;
+                            opacity: 0;
+                            transform: translateX(${Math.random() * 100 - 50}px) scale(0.5);
+                        }
+                    }
+                `;
+                    document.head.appendChild(style);
+                }
+
+                // Clean up after animation
+                setTimeout(() => {
+                    container.remove();
+                }, 6000);
+            }
+
+            function handleNoResponse() {
+                document.getElementById('valentineQuestion').style.display = 'none';
+                document.getElementById('responseMessage').innerHTML = `
+                <div class="alert alert-warning" role="alert">
+                    <h4 class="alert-heading">That's okay, love 💗</h4>
+                    <p>Take all the time you need, there's no rush.</p>
+                    <p>Whenever you feel ready, I'll be right here.</p>
+                    <hr>
+                    <p class="mb-0">And if you change your mind, the YES button will still be waiting for you ❤️</p>
+                </div>
+                `;
+
+                createFloatingHearts(10);
+            }
+
+            function showInitialState() {
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', options);
+                createFloatingHearts(15);
+
+                if (isValentinesDayOrLater && hasSaidYes) {
+                    document.getElementById('valentineQuestion').style.display = 'none';
+                    document.getElementById('valentineButtonContainer').style.display = 'block';
+                    document.getElementById('questionContainer').style.display = 'none';
+                    createFloatingHearts(50);
+                    document.body.style.background = 'linear-gradient(135deg, #ffccd5 0%, #ff6b8b 100%)';
+                    playCelebrationSound('valentine');
+                } else if (hasSaidYes) {
+                    document.getElementById('valentineQuestion').style.display = 'none';
+                    document.getElementById('responseMessage').innerHTML = `
+                    <div class="alert alert-info">
+                        <h4><i class="fas fa-heart me-2"></i>Welcome back, Arisa!</h4>
+                        <p>You already said YES to being my Valentine for 2026! ❤️</p>
+                        ${hasSentEmail ? '<p><i class="fas fa-check-circle me-1"></i> <em>I have already been notified by email</em></p>' : ''}
+                        <p class="mb-0">A special secret gift will unlock or be sent to you on <strong>February 14th, 2026</strong>!<br/>
+                            <a href="#" id="googleCalendarLink" class="calendar-link">
+                                <i class="fas fa-calendar-plus"></i>Click here to add a reminder to your Google Calendar
+                            </a>
+                        </p>
+                    </div>
+                `;
+                    
+                    // Setup the Google Calendar link
+                    setTimeout(() => {
+                        setupGoogleCalendarLink();
+                    }, 100);
+                    
+                    document.getElementById('countdownSection').style.display = 'block';
+                    startCountdown();
+                    document.getElementById('questionContainer').style.display = 'none';
+                } else if (localStorage.getItem('valentineResponse2026') === 'no') {
+                    document.getElementById('valentineQuestion').style.display = 'none';
+                    document.getElementById('responseMessage').innerHTML = `
+                    <div class="alert alert-warning" role="alert">
+                        <h4 class="alert-heading">Welcome back, Arisa</h4>
+                        <p>You previously said NO.</p>
+                        ${hasSentEmail ? '<p><i class="fas fa-check-circle me-1"></i> <em>I have already been notified by email</em></p>' : ''}
+                        <p class="mb-0">If you changed your mind, you can answer below.</p>
+                    </div>
+                `;
+                    document.getElementById('questionContainer').style.display = 'block';
+                }
+            }
+
+            // ============================================
+            // EVENT LISTENERS
+            // ============================================
+
+            document.getElementById('yesBtn').addEventListener('click', async function () {
+                this.disabled = true;
+                document.getElementById('noBtn').disabled = true;
+                this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Sending your answer...';
+
+                const timestamp = new Date().toLocaleString();
+                const emailSent = await sendEmail("YES", timestamp);
+
+                localStorage.setItem('valentineResponse2026', 'yes');
+                localStorage.setItem('valentineResponseDate', now.toISOString());
+                localStorage.setItem('emailSent2026', 'true');
+
+                handleYesResponse();
+            });
+
+            document.getElementById('noBtn').addEventListener('click', async function () {
+                this.disabled = true;
+                document.getElementById('yesBtn').disabled = true;
+                this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Sending your answer...';
+
+                const timestamp = new Date().toLocaleString();
+                await sendEmail("NO", timestamp);
+
+                localStorage.setItem('valentineResponse2026', 'no');
+                localStorage.setItem('valentineResponseDate', now.toISOString());
+                localStorage.setItem('emailSent2026', 'true');
+
+                handleNoResponse();
+            });
+
+            document.getElementById('valentineSiteBtn').addEventListener('click', function () {
+                this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Opening your surprise...';
+                this.disabled = true;
+
+                createFloatingHearts(100);
+
+                document.getElementById('responseMessage').innerHTML = `
+                <div class="alert alert-info">
+                    <h4><i class="fas fa-heart me-2"></i>Welcome to Valentine's Day 2026!</h4>
+                    <p>Redirecting you to your special Valentine's Day website...</p>
+                    <div class="progress mt-2">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%"></div>
+                    </div>
+                </div>
+            `;
+
+                setTimeout(() => {
+                    window.location.href = 'valentinesDay.html';
+                }, 2000);
+            });
+
+            // ============================================
+            // EASTER EGGS
+            // ============================================
+
+            let heartClickCount = 0;
+
+            document.querySelector('.heart-pulse').addEventListener('click', function () {
+                heartClickCount++;
+                if (heartClickCount === 5) {
+                    showEasterEgg("💝 You found a secret! Click 5 times = Heart Rain! 💝");
+                    for (let i = 0; i < 200; i++) {
+                        setTimeout(() => createHeartEmojiBalloons(3), i * 40);
+                    }
+                    heartClickCount = 0;
+                }
+            });
+
+            let konamiSequence = [];
+            const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+
+            document.addEventListener('keydown', (e) => {
+                konamiSequence.push(e.key);
+                konamiSequence = konamiSequence.slice(-10);
+                
+                if (konamiSequence.join(',') === konamiCode.join(',')) {
+                    showEasterEgg("🎮 KONAMI CODE! 🎮");
+                    document.body.style.background = 'linear-gradient(45deg, #ff6b8b, #ff477e, #2b2b2b)';
+                    for (let i = 0; i < 300; i++) {
+                        createHeartEmojiBalloons(2);
+                    }
+                    konamiSequence = [];
+                }
+            });
+
+            document.getElementById('currentDate').addEventListener('dblclick', function () {
+                showEasterEgg("📅 Date Double-Clicked! 📅");
+                createFloatingHearts(50);
+            });
+
+            function showEasterEgg(message) {
+                const egg = document.createElement('div');
+                egg.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: rgba(255, 107, 139, 0.95);
+                    color: white;
+                    padding: 30px 50px;
+                    border-radius: 20px;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    z-index: 10001;
+                    animation: popIn 0.4s ease-out;
+                `;
+                egg.textContent = message;
+                document.body.appendChild(egg);
+
+                setTimeout(() => {
+                    egg.style.animation = 'popOut 0.4s ease-out';
+                    setTimeout(() => egg.remove(), 400);
+                }, 2000);
+            }
+
+            if (!document.getElementById('easter-egg-animations')) {
+                const style = document.createElement('style');
+                style.id = 'easter-egg-animations';
+                style.textContent = `
+                    @keyframes popIn {
+                        0% { opacity: 0; transform: translate(-50%, -50%) scale(0.3); }
+                        100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+                    }
+                    @keyframes popOut {
+                        0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+                        100% { opacity: 0; transform: translate(-50%, -50%) scale(0.3); }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            // ============================================
+            // INITIALIZATION
+            // ============================================
+
+            showInitialState();
+
+            setInterval(() => {
+                createFloatingHearts(2);
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>
