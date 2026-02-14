@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's day ARISAAAAAA</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&family=Great+Vibes&family=Sacramento&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --valentine-red: #ff3366;
+            --soft-pink: #ffcce0;
+            --rose-gold: #e6b0aa;
+            --cream: #fff0f5;
+            --gold: #ffd700;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe6ee 100%);
+            color: #5a4a4a;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+                url('./ValentinesDayBackground.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 51, 102, 0.6);
+            }
+        }
+
+        .hero-subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--soft-pink);
+        }
+
+        .date-banner {
+            background: rgba(255, 51, 102, 0.9);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 2rem 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(255, 51, 102, 0.3);
+        }
+
+        /* Love Letter Section */
+        .love-letter-section {
+            padding: 6rem 2rem;
+            background: white;
+            position: relative;
+        }
+
+        .letter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff9fb;
+            padding: 4rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(255, 51, 102, 0.1);
+            border: 2px solid var(--soft-pink);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .letter-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(to right, var(--valentine-red), var(--rose-gold));
+        }
+
+        .letter-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .letter-icon {
+            font-size: 4rem;
+            color: var(--valentine-red);
+            margin-bottom: 1rem;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .letter-to {
+            font-family: 'Sacramento', cursive;
+            font-size: 3rem;
+            color: var(--valentine-red);
+            margin-bottom: 0.5rem;
+        }
+
+        .letter-date {
+            color: #999;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .letter-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .letter-content p {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .letter-content p::before {
+            content: '❤️';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--valentine-red);
+            text-align: right;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px dashed var(--soft-pink);
+        }
+
+        /* WHY I LOVE YOU SECTION — BRAND NEW with 8 buttons + image gallery */
+        .why-love-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #ffe9f0 0%, #ffdde6 100%);
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            text-align: center;
+            color: var(--valentine-red);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-sub {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #6a4a5a;
+            margin-bottom: 3rem;
+            font-style: italic;
+        }
+
+        .reason-buttons-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-bottom: 3rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .reason-btn {
+            background: white;
+            border: 2px solid var(--valentine-red);
+            color: var(--valentine-red);
+            padding: 0.9rem 1.8rem;
+            border-radius: 60px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            box-shadow: 0 6px 0 #b32e4a;
+            transition: all 0.1s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .reason-btn i {
+            font-size: 1.2rem;
+        }
+
+        .reason-btn:hover {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 #b32e4a;
+            background: #fff0f5;
+        }
+
+        .reason-btn.active {
+            background: var(--valentine-red);
+            color: white;
+            border-color: white;
+            box-shadow: 0 6px 0 #991f3f;
+        }
+
+        .gallery-panel {
+            background: white;
+            border-radius: 40px;
+            padding: 2rem;
+            box-shadow: 0 25px 50px rgba(255, 51, 102, 0.15);
+            max-width: 700px;
+            margin: 0 auto;
+            border: 3px solid var(--soft-pink);
+            min-height: 350px;
+            transition: all 0.3s;
+        }
+
+        .current-reason-header {
+            font-size: 2rem;
+            font-family: 'Dancing Script', cursive;
+            color: var(--valentine-red);
+            margin-bottom: 1rem;
+            border-bottom: 2px dashed var(--soft-pink);
+            padding-bottom: 0.5rem;
+        }
+
+        .random-image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .love-image {
+            max-width: 100%;
+            max-height: 280px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            border: 5px solid white;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            font-size: 1.1rem;
+            color: #6a4a5a;
+            font-weight: 500;
+            background: rgba(255, 204, 224, 0.4);
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+        }
+
+        .shuffle-hint {
+            font-size: 0.95rem;
+            color: #b36b7a;
+            margin-top: 1rem;
+        }
+
+        /* Memories Section */
+        .memories-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #ffe6ee 0%, #ffccdd 100%);
+        }
+
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .memory-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(255, 51, 102, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .memory-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .memory-image {
+            height: 200px;
+            background: linear-gradient(135deg, #ff3366, #ff6699);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        .memory-content {
+            padding: 2rem;
+        }
+
+        .memory-title {
+            font-size: 1.5rem;
+            color: var(--valentine-red);
+            margin-bottom: 1rem;
+        }
+
+        /* Countdown Timer */
+        .countdown-section {
+            padding: 4rem 2rem;
+            background: white;
+            text-align: center;
+        }
+
+        .countdown-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: var(--valentine-red);
+            margin-bottom: 2rem;
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .countdown-box {
+            background: linear-gradient(135deg, var(--valentine-red), #ff6699);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            min-width: 120px;
+            box-shadow: 0 10px 30px rgba(255, 51, 102, 0.2);
+        }
+
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        /* Promises Section */
+        .promises-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe6ee 100%);
+        }
+
+        .promises-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .promise-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(255, 51, 102, 0.1);
+            border-left: 5px solid var(--valentine-red);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .promise-icon {
+            font-size: 2rem;
+            color: var(--valentine-red);
+            min-width: 60px;
+        }
+
+        .promise-text {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        /* Surprise Section */
+        .surprise-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #ff3366 0%, #ff6699 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .surprise-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.1)" d="M0,0 L100,0 L100,100 Z"/></svg>');
+            background-size: cover;
+        }
+
+        .surprise-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .surprise-content {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        .surprise-button {
+            background: white;
+            color: var(--valentine-red);
+            border: none;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .surprise-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c2c2c;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-heart {
+            color: var(--valentine-red);
+            animation: heartbeat 1.5s infinite;
+        }
+
+        /* Animations */
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.8rem;
+            }
+
+            .letter-container {
+                padding: 2rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .countdown-box {
+                min-width: 80px;
+                padding: 1rem;
+            }
+
+            .countdown-number {
+                font-size: 2rem;
+            }
+
+            .reason-btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1 class="hero-title">Happy Valentine's Day</h1>
+            <h2 class="hero-subtitle">My Beautiful Arisa</h2>
+            <div class="date-banner" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fas fa-heart me-2"></i>February 14, 2026
+            </div>
+            <p class="lead mt-4" style="font-size: 1.3rem;" data-aos="fade-up" data-aos-delay="500">
+                This day is only about you, and I was hoping I could make you happy with this little surprise.
+            <div class="mt-5" data-aos="fade-up" data-aos-delay="700">
+                <button class="btn btn-light btn-lg rounded-pill px-5 py-3" onclick="scrollToLetter()">
+                    <i class="fas fa-envelope-open-text me-2"></i>Read My Letter
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Letter -->
+    <section class="love-letter-section" id="loveLetter">
+        <div class="letter-container" data-aos="fade-up">
+            <div class="letter-header">
+                <div class="letter-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h2 class="letter-to">To My Dear Arisa,</h2>
+                <div class="letter-date">2026-02-14</div>
+            </div>
+
+            <div class="letter-content">
+                <p>My love,</p>
+                <p>I'd like to start with that I am thankful for you. You are the best thing happened to me in my life.
+                    You came in my life in like the most unexpected way, I texted you randomly hoping to get a good
+                    friend, but now here we are.</p>
+                <p>You mean a lot to me, your feelings, your work, what is important for you is important for me too.
+                    With everything that life throws at us I am still so grateful that we found each other and that we
+                    became a strong couple, and for me it is still unbelievable that out of everyone I found you. And
+                    being in a strong relationship with you is like... I don't know how to describe it. It feels magical
+                    with you, it feel so special.</p>
+                <p>Still we had some disagreements and different feelings in the near past. Work also got you busy a lot
+                    lately and you got overwhelmed by everything. So I feel like it is important now to make you feel
+                    loved and needed and wanted. I'm just trying my best to make you feel loved and appreciated.
+                    Honestly.. I don't know how it is going. But I hope that I can get better and better for you, to
+                    never fail.</p>
+                <p>And for you it's worth it. It's worth the distance, the wait, the years we spend apart. I can't wait
+                    to hold you in my arms one day, to be with you finally. Physically too. 8259.1 kilometers separate
+                    us, but sometimes it feels like you are right next to me. And no matter what happens to any of us,
+                    I'd like you to know these:</p>
+                <p>I choose you</p>
+                <p>I appreciate you</p>
+                <p>I'm proud of you</p>
+                <p>Not just on the good days, every day</p>
+                <p>Thank you for being yourself. <br>
+                    Thank you for being mine and loving me</p>
+                <p>I love you so much my BabyBear💖</p>
+                <br>
+                <p>Forever yours,</p>
+            </div>
+            <div class="signature">Márk</div>
+        </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!--  NEW · WHY I LOVE YOU · 8 BUTTONS · 5 IMAGES EACH  -->
+    <!-- ============================================= -->
+    <section class="why-love-section" id="whyLove">
+        <h2 class="section-title" data-aos="fade-up">Why I Love You, Arisa?</h2>
+        <p style="text-align: center; font-size: 0.9rem; color: #8a6a7a; margin-bottom: 1rem; font-style: italic;" data-aos="fade-up" data-aos-delay="50">
+            (you might have asked it a few times in your head before)
+        </p>
+        <div class="section-sub" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-heart me-2" style="color: var(--valentine-red);"></i>
+            I love you because:
+            <i class="fas fa-heart ms-2" style="color: var(--valentine-red);"></i>
+        </div>
+
+        <!-- 8 Buttons – each button = 5 pictures (placeholders for your real photos) -->
+        <div class="reason-buttons-grid" data-aos="fade-up" data-aos-delay="150">
+            <button class="reason-btn" id="reason1" onclick="showRandomImage('smile')">
+                <i class="fas fa-smile-beam"></i> Your Smile
+            </button>
+            <button class="reason-btn" id="reason2" onclick="showRandomImage('laugh')">
+                <i class="fas fa-laugh-squint"></i> Your Laugh
+            </button>
+            <button class="reason-btn" id="reason3" onclick="showRandomImage('kindness')">
+                <i class="fas fa-hand-holding-heart"></i> Your Kindness
+            </button>
+            <button class="reason-btn" id="reason4" onclick="showRandomImage('eyes')">
+                <i class="fas fa-eye"></i> Your Eyes
+            </button>
+            <button class="reason-btn" id="reason5" onclick="showRandomImage('voice')">
+                <i class="fas fa-microphone-alt"></i> Your Voice
+            </button>
+            <button class="reason-btn" id="reason6" onclick="showRandomImage('hugs')">
+                <i class="fas fa-hands"></i> Your Hugs
+            </button>
+            <button class="reason-btn" id="reason7" onclick="showRandomImage('mind')">
+                <i class="fas fa-brain"></i> Your Mind
+            </button>
+            <button class="reason-btn" id="reason8" onclick="showRandomImage('passion')">
+                <i class="fas fa-fire"></i> Your Passion
+            </button>
+            <button class="reason-btn" id="reason9" onclick="showRandomImage('boobies')">
+                <i class="fas fa-grin-hearts"></i> Your Boobs
+            </button>
+            <button class="reason-btn" id="reason10" onclick="showRandomImage('eggstra')">
+                <i class="fas fa-egg"></i> Egg
+            </button>
+        </div>
+
+        <!-- Gallery panel – shows random image and caption -->
+        <div class="gallery-panel" data-aos="zoom-in" data-aos-delay="200" id="galleryPanel">
+            <div class="current-reason-header" id="reasonHeader">
+                <i class="fas fa-heart"></i> Click a reason above
+            </div>
+            <div class="random-image-container" id="imageContainer">
+                <!-- placeholder art / heart -->
+                <div style="padding: 2rem; text-align: center; color: #b37b8a;">
+                    <i class="fas fa-images fa-4x mb-3" style="color: #ffa5b9;"></i>
+                    <p style="font-size: 1.3rem;">Each button holds photos<br><span style="font-size: 1rem;"></span></p>
+                </div>
+            </div>
+            <div class="shuffle-hint" id="shuffleHint">
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown to Forever -->
+    <section class="countdown-section">
+        <h2 class="countdown-title" data-aos="fade-up">Counting Our Forever</h2>
+        <div class="countdown-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="countdown-box">
+                <div class="countdown-number" id="years">0</div>
+                <div class="countdown-label">Years Together</div>
+            </div>
+            <div class="countdown-box">
+                <div class="countdown-number" id="months">0</div>
+                <div class="countdown-label">Months of Joy</div>
+            </div>
+            <div class="countdown-box">
+                <div class="countdown-number" id="days">0</div>
+                <div class="countdown-label">Days of Love</div>
+            </div>
+            <div class="countdown-box">
+                <div class="countdown-number" id="hours">0</div>
+                <div class="countdown-label">Hours of Smiles</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promises Section -->
+    <section class="promises-section">
+        <h2 class="section-title" data-aos="fade-up">My Promises to You</h2>
+        <div class="promises-container">
+            <div class="promise-item" data-aos="fade-right" data-aos-delay="100">
+                <div class="promise-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="promise-text">
+                    I promise to love you more and more each day
+                </div>
+            </div>
+
+            <div class="promise-item" data-aos="fade-right" data-aos-delay="200">
+                <div class="promise-icon">
+                    <i class="fas fa-laugh"></i>
+                </div>
+                <div class="promise-text">
+                    I promise to take care of you no matter what happens
+                </div>
+            </div>
+
+            <div class="promise-item" data-aos="fade-right" data-aos-delay="300">
+                <div class="promise-icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <div class="promise-text">
+                    I promise to make you laugh anytime I get a chance
+                </div>
+            </div>
+
+            <div class="promise-item" data-aos="fade-right" data-aos-delay="400">
+                <div class="promise-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="promise-text">I promise to fulfill your desires and needs
+                </div>
+            </div>
+
+            <div class="promise-item" data-aos="fade-right" data-aos-delay="400">
+                <div class="promise-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <div class="promise-text">I promise to help you with anything I can help with, and be your biggest
+                    supporter
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Surprise Section -->
+    <section class="surprise-section" id="surprise">
+        <h2 class="surprise-title" data-aos="fade-up">A Sweet Night Together</h2>
+        <div class="surprise-content" data-aos="fade-up" data-aos-delay="200">
+            <p>Click the button and I will show you two sweet ideas for tonight.</p>
+        </div>
+        <div class="d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="400">
+            <button class="surprise-button" onclick="revealSurprise()">
+                <i class="fas fa-gift me-2"></i>Reveal the Surprise
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="mb-3">
+                <i class="fas fa-heart footer-heart fa-2x"></i>
+            </div>
+            <h4 class="mb-3">Made by Márk</h4>
+            <p class="mb-2">For Arisa, the love of my life</p>
+            <p class="small">February 14, 2026</p>
+            <p class="small mt-4"><strong>Fck Valentine's Day, i love you every day </strong></p>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // =============================================
+        //  IMAGE DATABASE: 8 REASONS × 5 IMAGES EACH
+        //  REPLACE THESE SAMPLE URLs WITH YOUR OWN PHOTOS
+        // =============================================
+        const loveImages = {
+    smile: [
+        { url: "./smile1.jpg", caption: "the smile that melts my heart" },
+        { url: "./Smile2.jpg", caption: "pretty little baby" },
+        { url: "./Smile3.jpg", caption: "so cuteeee" },
+        { url: "./Smile4.jpg", caption: "the most gorgeous smile on the world" },
+        { url: "./Smile6.jpg", caption: "my favorite view" }
+    ],
+    laugh: [
+        { url: "./Laugh1.jpg", caption: "being silly and laughing together" },
+        { url: "./Laugh2.jpg", caption: "your laugh is the most beautiful music for my ears" },
+        { url: "./Laugh3.jpg", caption: "when we make each other laugh" }
+    ],
+    kindness: [
+        { url: "./Kindness1.jpg", caption: "your heart of gold" },
+        { url: "./Kindness2.jpg", caption: "caring for everyone" },
+        { url: "./Kindness3.jpg", caption: "gentle seeetheart" }
+    ],
+    eyes: [
+        { url: "./Eyes1.jpg", caption: "the cutest eyes on the world" },
+        { url: "./Eyes4.jpg", caption: "our silly self" },
+        { url: "./Eyes5.png", caption: "those sweet memories" },
+        { url: "./Eyes6.png", caption: "those sweet memories" }
+    ],
+    voice: [
+            {url:"./Snore.png", caption: "your snoreee 😝"}
+            ],
+    hugs: [
+        { url: "./Hug1.jpg", caption: "so cuteeee waaaaa" },
+        { url: "./Hug2.jpg", caption: "Tuni looks so comfortable wrapped in your arms" },
+        { url: "./Hug3.jpg", caption: "i wanna cuddle at this point :(" },
+        { url: "./Hug4.jpg", caption: "mhehehehehe" }
+    ],
+    mind: [], // no mind images in the folder
+    passion: [
+        { url: "./Passion.jpg", caption: "bleeee" },
+        { url: "./Passion2.jpg", caption: "FOOOOODDD WAAAAA" },
+        { url: "./Passion3.jpg", caption: "so cuteee" },
+        { url: "./Passion4.jpg", caption: "WAAAAA I CANT TAKE THIS MUCH CUTENESSSS" },
+        { url: "./Passion5.jpg", caption: "🥦👁️👅👁️" },
+        { url: "./Passion6.jpg", caption: "😫" },
+        { url: "./Passion7.jpg", caption: "tired bleee" },
+        { url: "./Passion8.jpg", caption: "YEEEYYY TUNIIII" },
+        { url: "./Passion9.jpg", caption: "so fresh 😛" },
+        { url: "./Passion10.jpg", caption: "so passionate about bleee" },
+        { url: "./Passion11.jpg", caption: "when 2 passions meet, food and bleeeee😋" },
+        { url: "./passion13.jpg", caption: "👁️👅👁️" },
+        { url: "./Passion14.jpg", caption: "wwaaaahhahahaha" },
+        { url: "./Passion15.jpg", caption: "✌👁️👅👁️" },
+        { url: "./Padsion12.jpg", caption: "NO MATTER WHAT BLEEE IS ALWAYS WITH US (last picture)" }
+            
+            
+    ],
+    boobies: [{url: "./Boobie.jpg", caption: "🤨🤨🤨🤨 what are you looking for here? 🤨🤨🤨🤨"}],
+    eggstra: [
+        { url: "./Egg.png", caption: "Eggstra special to me" }
+    ]
+};
+
+        // Currently selected reason (default: smile)
+        let currentReason = 'smile';
+        const reasonIndices = {};
+
+        // Function to show random image based on reason key
+        function showRandomImage(reasonKey) {
+            // Highlight active button
+            document.querySelectorAll('.reason-btn').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = document.getElementById(`reason${Object.keys(loveImages).indexOf(reasonKey) + 1}`);
+            if (activeBtn) activeBtn.classList.add('active');
+
+            currentReason = reasonKey;
+            const imagesArray = loveImages[reasonKey];
+            if (!imagesArray || imagesArray.length === 0) {
+                document.getElementById('reasonHeader').innerHTML = '<i class="fas fa-heart"></i> No photos yet';
+                document.getElementById('imageContainer').innerHTML = `
+            <div style="padding: 2rem; text-align: center; color: #b37b8a;">
+                <i class="fas fa-images fa-4x mb-3" style="color: #ffa5b9;"></i>
+                <p style="font-size: 1.1rem;">Add photos for this reason to see them here.</p>
+            </div>
+        `;
+                document.getElementById('shuffleHint').textContent = '';
+                return;
+            }
+            const currentIndex = reasonIndices[reasonKey] ?? 0;
+            const selected = imagesArray[currentIndex];
+            reasonIndices[reasonKey] = (currentIndex + 1) % imagesArray.length;
+
+            // Update header
+            let headerText = reasonKey;
+            if (reasonKey === 'smile') headerText = 'Your Smile';
+            else if (reasonKey === 'laugh') headerText = 'Your Laugh';
+            else if (reasonKey === 'kindness') headerText = 'Your Kindness';
+            else if (reasonKey === 'eyes') headerText = 'Your Eyes';
+            else if (reasonKey === 'voice') headerText = 'Your Voice';
+            else if (reasonKey === 'hugs') headerText = 'Your Hugs';
+            else if (reasonKey === 'mind') headerText = 'Your Mind';
+            else if (reasonKey === 'passion') headerText = 'Your Passion';
+            else if (reasonKey === 'boobies') headerText = 'Your Boobs';
+            else if (reasonKey === 'eggstra') headerText = 'Eggstra';
+
+            document.getElementById('reasonHeader').innerHTML = `<i class="fas fa-heart"></i> ${headerText}`;
+
+            // Build image HTML
+            const imgHTML = `
+            <img src="${selected.url}" alt="${headerText}" class="love-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400/ffcccc/ff3366?text=❤️+Memory'">
+            <div class="image-caption">
+                <i class="fas fa-quote-left me-1" style="opacity:0.7;"></i> ${selected.caption} <i class="fas fa-quote-right ms-1" style="opacity:0.7;"></i>
+            </div>
+        `;
+            document.getElementById('imageContainer').innerHTML = imgHTML;
+            document.getElementById('shuffleHint').innerHTML = '<i class="fas fa-step-forward"></i> click again for the next photo';
+
+            // add floating heart animation
+            createSmallHearts(6);
+        }
+
+        // helper to create tiny hearts
+        function createSmallHearts(count) {
+            for (let i = 0; i < count; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤️';
+                heart.style.position = 'fixed';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = '80vh';
+                heart.style.fontSize = '20px';
+                heart.style.opacity = '0.7';
+                heart.style.pointerEvents = 'none';
+                heart.style.zIndex = '9999';
+                heart.style.animation = `float ${Math.random() * 2 + 2}s ease-out forwards`;
+                document.body.appendChild(heart);
+                setTimeout(() => { if (heart.parentNode) heart.parentNode.removeChild(heart); }, 3000);
+            }
+        }
+
+        // Countdown (first meeting date)
+        function updateCountdown() {
+            const firstMeeting = new Date('2025-09-26'); // CHANGE THIS!
+            const now = new Date();
+            const diff = now - firstMeeting;
+            document.getElementById('years').textContent = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+            document.getElementById('months').textContent = Math.floor((diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44));
+            document.getElementById('days').textContent = Math.floor((diff % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
+            document.getElementById('hours').textContent = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 3600000);
+
+        function scrollToLetter() {
+            document.getElementById('loveLetter').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Surprise reveal (movie night + game night ideas)
+        function revealSurprise() {
+            const button = document.querySelector('.surprise-button');
+            button.disabled = true;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Setting it up...';
+            createFloatingHearts(50);
+            setTimeout(() => {
+                document.querySelector('.surprise-content').innerHTML = `
+                <div class="alert alert-light" style="background: rgba(255,255,255,0.9);">
+                    <h4><i class="fas fa-film me-2"></i>Movie Night</h4>
+                    <p class="mb-2">I know a movie night is not the dream Valentine's day</p>
+                    <p class="mb-2">But we could watch a movie</p>
+                    <p class="mb-2">A love movie, or any movie of your choice</p>
+                    <p class="mb-2">Except Hacksaw Ridge😭😭</p>
+                </div>
+                <div class="alert alert-light" style="background: rgba(255,255,255,0.9);">
+                    <h4><i class="fas fa-gamepad me-2"></i>Game Night</h4>
+                    <p class="mb-2"><strong>Pick the game:</strong> anything you would like to play</p>
+                    <p class="mb-2"><strong>Pick the time:</strong> tonight</p>
+                </div>
+                <p class="mt-3">Tell me your choice and I will be right there with you, my love. ❤️</p>
+                `;
+                button.style.display = 'none';
+                createFloatingHearts(100);
+            }, 1200);
+        }
+
+        function createFloatingHearts(count) {
+            for (let i = 0; i < count; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤️';
+                heart.style.position = 'fixed';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = '100vh';
+                heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+                heart.style.opacity = '0.7';
+                heart.style.pointerEvents = 'none';
+                heart.style.zIndex = '9999';
+                heart.style.animation = `float ${Math.random() * 3 + 2}s ease-in forwards`;
+                document.body.appendChild(heart);
+                setTimeout(() => { if (heart.parentNode) heart.parentNode.removeChild(heart); }, 5000);
+            }
+        }
+
+        // Animation keyframe injected
+        const style = document.createElement('style');
+        style.textContent = `@keyframes float { to { transform: translateY(-100vh) rotate(360deg); opacity: 0; } }`;
+        document.head.appendChild(style);
+
+        // On load: keep gallery empty until a button is clicked
+        window.onload = function () {
+            createFloatingHearts(15);
+        };
+    </script>
+</body>
+
+</html>
